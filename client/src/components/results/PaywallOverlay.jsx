@@ -1,7 +1,7 @@
 export default function PaywallOverlay({ onPay, loading }) {
   return (
-    <div className="absolute inset-0 z-10 flex items-center justify-center rounded-3xl"
-         style={{ backdropFilter: 'blur(2px)', backgroundColor: 'rgba(255,247,237,0.5)' }}>
+    <div className="absolute inset-0 z-10 flex items-start justify-center rounded-3xl pt-12"
+         style={{ backdropFilter: 'blur(12px)', backgroundColor: 'rgba(255,247,237,0.55)' }}>
       <div className="bg-white rounded-3xl shadow-2xl p-8 max-w-sm w-full mx-4 text-center border border-warm-100">
         {/* Lock icon */}
         <div className="w-16 h-16 bg-warm-100 rounded-full flex items-center justify-center mx-auto mb-5">
