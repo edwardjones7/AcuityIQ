@@ -25,7 +25,8 @@
       "Bash(curl -s -X POST http://localhost:3001/api/checkout/create-session)",
       "Bash(find C:UsersedjjoOneDriveDesktopiqtest -not -path */node_modules/* -type f)",
       "Bash(npx vite:*)",
-      "Bash(powershell -Command \":*)"
+      "Bash(powershell -Command \":*)",
+      "Bash(node -e \"const q = require\\(''./server/data/questions.json''\\); const domains = {}; q.forEach\\(x => { domains[x.domain] = \\(domains[x.domain]||0\\)+1; }\\); console.log\\(domains\\); console.log\\(''total:'', q.length\\);\")"
     ]
   }
 }

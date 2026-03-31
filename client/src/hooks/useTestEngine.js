@@ -21,23 +21,17 @@ function initDomainState() {
 }
 
 function selectQuestion(questions, domain, difficulty, answeredIds) {
-  let candidates = questions.filter(
-    q => q.domain === domain &&
-         q.difficulty === difficulty &&
-         !answeredIds.has(q.id)
-  );
-
-  if (candidates.length === 0) {
-    // Widen search by ±1
-    candidates = questions.filter(
+  for (let spread = 0; spread <= 4; spread++) {
+    const candidates = questions.filter(
       q => q.domain === domain &&
-           Math.abs(q.difficulty - difficulty) <= 1 &&
+           Math.abs(q.difficulty - difficulty) <= spread &&
            !answeredIds.has(q.id)
     );
+    if (candidates.length > 0) {
+      return candidates[Math.floor(Math.random() * candidates.length)];
+    }
   }
-
-  if (candidates.length === 0) return null;
-  return candidates[Math.floor(Math.random() * candidates.length)];
+  return null;
 }
 
 function getNextDomain(domainStates, roundIndex) {
