@@ -22,7 +22,10 @@
       "Bash(powershell -Command \"Get-Process node -ErrorAction SilentlyContinue | Stop-Process -Force; echo ''killed''\")",
       "Bash(powershell -Command \"Remove-Item -Recurse -Force ''C:\\\\Users\\\\edjjo\\\\OneDrive\\\\Desktop\\\\iqtest\\\\client\\\\node_modules\\\\.vite'' -ErrorAction SilentlyContinue; echo ''cache cleared''\")",
       "Bash(powershell -Command \"Get-Process node -ErrorAction SilentlyContinue | Stop-Process -Force; echo killed\")",
-      "Bash(curl -s -X POST http://localhost:3001/api/checkout/create-session)"
+      "Bash(curl -s -X POST http://localhost:3001/api/checkout/create-session)",
+      "Bash(find C:UsersedjjoOneDriveDesktopiqtest -not -path */node_modules/* -type f)",
+      "Bash(npx vite:*)",
+      "Bash(powershell -Command \":*)"
     ]
   }
 }

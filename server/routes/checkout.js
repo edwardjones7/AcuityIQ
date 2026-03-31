@@ -7,7 +7,7 @@ const Stripe = require('stripe');
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 const CLIENT_URL = process.env.CLIENT_URL || 'http://localhost:5173';
 
-// Create a Stripe Checkout session for $1.99 results unlock
+// Create a Stripe Checkout session for $4.99 results unlock
 router.post('/create-session', async (req, res) => {
   try {
     const session = await stripe.checkout.sessions.create({
@@ -17,10 +17,10 @@ router.post('/create-session', async (req, res) => {
           price_data: {
             currency: 'usd',
             product_data: {
-              name: 'IQ Assessment Results',
-              description: 'Full results report — IQ score, domain breakdown, percentile, and in-depth analysis.',
+              name: 'Acuity Full Results Report',
+              description: 'Complete IQ score, 4-domain breakdown, percentile rank, written cognitive analysis & certificate.',
             },
-            unit_amount: 199, // $1.99 in cents
+            unit_amount: 499, // $4.99 in cents
           },
           quantity: 1,
         },

@@ -3,36 +3,101 @@
 @tailwind utilities;
 
 @layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
   body {
-    @apply bg-warm-50 text-warm-900 font-sans antialiased;
+    background-color: #FDF8F9;
+    color: #1C0812;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: #FDF8F9; }
+  ::-webkit-scrollbar-thumb { background: #E8BEC6; border-radius: 3px; }
 }
 
 @layer components {
-  .btn-primary {
-    @apply bg-warm-500 hover:bg-warm-600 text-white font-semibold px-8 py-3 rounded-2xl transition-all duration-200 shadow-soft hover:shadow-md active:scale-95;
-  }
-
-  .btn-secondary {
-    @apply bg-white border-2 border-warm-200 hover:border-warm-400 text-warm-700 font-semibold px-8 py-3 rounded-2xl transition-all duration-200;
-  }
-
   .card {
-    @apply bg-white rounded-3xl shadow-card p-6 md:p-8;
+    background: #FFFFFF;
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(90,20,40,0.09), 0 1px 4px rgba(90,20,40,0.05);
+    border: 1px solid rgba(242,218,222,0.9);
+  }
+
+  .card-sm {
+    background: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(90,20,40,0.07);
+    border: 1px solid rgba(242,218,222,0.9);
+  }
+
+  /* Primary — deep burgundy/wine */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2.5 font-semibold px-8 py-3.5 rounded-2xl transition-all duration-200 select-none;
+    background: #7A1E39;
+    color: white;
+    box-shadow: 0 2px 8px rgba(122,30,57,0.28), 0 1px 2px rgba(122,30,57,0.18);
+  }
+  .btn-primary:hover:not(:disabled) {
+    background: #5C0D24;
+    box-shadow: 0 6px 20px rgba(122,30,57,0.36), 0 2px 6px rgba(122,30,57,0.2);
+    transform: translateY(-1px);
+  }
+  .btn-primary:active:not(:disabled) {
+    transform: translateY(0) scale(0.98);
+  }
+
+  /* Secondary */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2.5 font-semibold px-8 py-3.5 rounded-2xl transition-all duration-200 select-none;
+    background: #FFFFFF;
+    color: #7A1E39;
+    border: 1.5px solid #E8BEC6;
+    box-shadow: 0 1px 4px rgba(90,20,40,0.06);
+  }
+  .btn-secondary:hover:not(:disabled) {
+    border-color: #BC6680;
+    transform: translateY(-1px);
+  }
+
+  /* Badge */
+  .badge {
+    @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide;
+    background: rgba(122,30,57,0.08);
+    border: 1px solid rgba(122,30,57,0.18);
+    color: #7A1E39;
+  }
+
+  /* Gradient text — rose to mauve */
+  .text-gradient-warm {
+    background: linear-gradient(135deg, #E11D48 0%, #BE185D 40%, #9B3A58 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 5s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .section-label {
+    @apply text-xs font-bold uppercase tracking-[0.15em];
+    color: #BC6680;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+
+  .glass-overlay {
+    backdrop-filter: blur(20px) saturate(1.6);
+    -webkit-backdrop-filter: blur(20px) saturate(1.6);
+    background: rgba(253, 248, 249, 0.88);
   }
 }
 
 @media print {
-  .no-print {
-    display: none !important;
-  }
-
-  body {
-    background: white;
-  }
-
-  .card {
-    box-shadow: none;
-    border: 1px solid #e5e7eb;
-  }
+  .no-print { display: none !important; }
+  body { background: white; }
 }

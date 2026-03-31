@@ -15,6 +15,11 @@ export async function submitAnswers(answers) {
   return data;
 }
 
+export async function captureEmail({ email, iq, band, percentile }) {
+  const { data } = await api.post('/email/capture', { email, iq, band, percentile });
+  return data;
+}
+
 export async function createCheckoutSession() {
   const { data } = await api.post('/checkout/create-session');
   return data.url;

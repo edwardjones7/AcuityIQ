@@ -1,0 +1,82 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#FDF8F9"/>
+
+  <!-- Ambient blobs -->
+  <circle cx="1050" cy="120" r="380" fill="url(#blob1)"/>
+  <circle cx="150" cy="520" r="280" fill="url(#blob2)"/>
+
+  <defs>
+    <radialGradient id="blob1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E11D48" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#E11D48" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blob2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Logo mark -->
+  <g transform="translate(100, 100)">
+    <circle cx="30" cy="30" r="27" stroke="#BE185D" stroke-width="3.5" fill="none"/>
+    <line x1="30" y1="3"  x2="30" y2="12" stroke="#BE185D" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="57" y1="30" x2="48" y2="30" stroke="#BE185D" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="30" y1="57" x2="30" y2="48" stroke="#BE185D" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="3"  y1="30" x2="12" y2="30" stroke="#BE185D" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="30" cy="30" r="15" stroke="#E11D48" stroke-width="2.5" fill="none" opacity="0.35"/>
+    <line x1="30" y1="30" x2="42" y2="16" stroke="#E11D48" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="30" cy="30" r="4.5" fill="#BE185D"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="175" y="145" font-family="Inter, system-ui, sans-serif" font-weight="800"
+    font-size="44" fill="#360511" letter-spacing="-1">Acuity</text>
+
+  <!-- Divider -->
+  <line x1="100" y1="200" x2="1100" y2="200" stroke="#F2DADE" stroke-width="1.5"/>
+
+  <!-- Main headline -->
+  <text x="100" y="310" font-family="Inter, system-ui, sans-serif" font-weight="900"
+    font-size="88" fill="#1C0812" letter-spacing="-3">Discover What</text>
+  <text x="100" y="410" font-family="Inter, system-ui, sans-serif" font-weight="900"
+    font-size="88" letter-spacing="-3">
+    <tspan fill="#E11D48">Your Mind</tspan>
+    <tspan fill="#1C0812"> Can Do.</tspan>
+  </text>
+
+  <!-- Subtext -->
+  <text x="100" y="480" font-family="Inter, system-ui, sans-serif" font-weight="400"
+    font-size="28" fill="#9B3A58" letter-spacing="-0.5">
+    Adaptive IQ Assessment · 40 Questions · 4 Domains · Normed Score
+  </text>
+
+  <!-- Stats pills -->
+  <rect x="100" y="520" width="160" height="48" rx="24" fill="#FAF0F3" stroke="#F2DADE" stroke-width="1.5"/>
+  <text x="180" y="550" font-family="Inter, sans-serif" font-weight="700" font-size="18"
+    fill="#7A1E39" text-anchor="middle">40 Questions</text>
+
+  <rect x="276" y="520" width="140" height="48" rx="24" fill="#FAF0F3" stroke="#F2DADE" stroke-width="1.5"/>
+  <text x="346" y="550" font-family="Inter, sans-serif" font-weight="700" font-size="18"
+    fill="#7A1E39" text-anchor="middle">4 Domains</text>
+
+  <rect x="432" y="520" width="150" height="48" rx="24" fill="#FAF0F3" stroke="#F2DADE" stroke-width="1.5"/>
+  <text x="507" y="550" font-family="Inter, sans-serif" font-weight="700" font-size="18"
+    fill="#7A1E39" text-anchor="middle">~20 Minutes</text>
+
+  <rect x="598" y="520" width="160" height="48" rx="24" fill="#FAF0F3" stroke="#F2DADE" stroke-width="1.5"/>
+  <text x="678" y="550" font-family="Inter, sans-serif" font-weight="700" font-size="18"
+    fill="#7A1E39" text-anchor="middle">Normed Score</text>
+
+  <!-- Large decorative logo mark (right side) -->
+  <g transform="translate(860, 250) scale(3.2)" opacity="0.07">
+    <circle cx="30" cy="30" r="27" stroke="#BE185D" stroke-width="3.5" fill="none"/>
+    <line x1="30" y1="3"  x2="30" y2="12" stroke="#BE185D" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="57" y1="30" x2="48" y2="30" stroke="#BE185D" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="30" y1="57" x2="30" y2="48" stroke="#BE185D" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="3"  y1="30" x2="12" y2="30" stroke="#BE185D" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="30" cy="30" r="15" stroke="#E11D48" stroke-width="2.5" fill="none"/>
+    <line x1="30" y1="30" x2="42" y2="16" stroke="#E11D48" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="30" cy="30" r="4.5" fill="#BE185D"/>
+  </g>
+</svg>
