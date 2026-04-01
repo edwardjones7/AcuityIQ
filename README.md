@@ -2,7 +2,7 @@
 
 > A full-stack, production-ready cognitive assessment platform built from scratch. Adaptive testing engine, real-time scoring, Stripe payments, and a premium branded UI.
 
-**Live:** [acuity.ai](https://acuityiq.live) &nbsp;·&nbsp; **Stack:** React 18 · Node.js · Express · Stripe · Framer Motion · Tailwind CSS
+**Live:** [acuityiq.live](https://acuityiq.live) &nbsp;·&nbsp; **Stack:** React 18 · Node.js · Express · Stripe · Framer Motion · Tailwind CSS
 
 ---
 
