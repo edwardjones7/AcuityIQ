@@ -20,7 +20,7 @@ router.post('/create-session', async (req, res) => {
               name: 'Acuity Full Results Report',
               description: 'Complete IQ score, 4-domain breakdown, percentile rank, written cognitive analysis & certificate.',
             },
-            unit_amount: 499, // $4.99 in cents
+            unit_amount: 299, // $2.99 in cents
           },
           quantity: 1,
         },
