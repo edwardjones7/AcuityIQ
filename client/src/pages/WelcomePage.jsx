@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Wordmark } from '../components/Logo.jsx';
 
 const DOMAINS = [
@@ -9,43 +8,6 @@ const DOMAINS = [
   { icon: '◇', label: 'Numerical Reasoning', desc: 'Number series, sequences, and quantitative problem solving.',           color: '#0369A1', bg: 'rgba(3,105,161,0.07)' },
   { icon: '◎', label: 'Spatial Reasoning',   desc: '3D visualisation, mental rotation, and shape manipulation.',            color: '#065F46', bg: 'rgba(6,95,70,0.07)' },
 ];
-
-const FAQS = [
-  { q: 'Is this IQ test free?', a: 'Taking the full 40-question test is free. Your composite IQ score, percentile rank, and 4-domain breakdown are unlocked for $2.99, which also includes a written cognitive analysis.' },
-  { q: 'How accurate is this IQ test?', a: 'Acuity uses Computer Adaptive Testing (CAT) — the same methodology used in professionally administered assessments. Questions calibrate to your ability level in real time, producing a normed IQ score (mean 100, SD 15).' },
-  { q: 'How long does the IQ test take?', a: 'The test has 40 adaptive questions and takes around 20 minutes. There is no per-question time limit.' },
-  { q: 'What does my IQ score mean?', a: 'IQ scores are normed with a mean of 100 and standard deviation of 15. A score of 90–109 is Average, 110–119 is High Average, 120–129 is Superior, and 130+ is Very Superior. Your result includes a percentile rank.' },
-  { q: 'What is a good IQ score?', a: 'The average IQ score is 100. Scores above 115 place you in the top ~16% of the population; above 130 is the top ~2%. Acuity measures scores from 40 to 160.' },
-  { q: 'What cognitive domains does the test measure?', a: 'Acuity measures four domains: Pattern Recognition, Verbal Reasoning, Numerical Reasoning, and Spatial Reasoning. You receive a separate score and breakdown for each.' },
-];
-
-function FaqItem({ q, a }) {
-  const [open, setOpen] = useState(false);
-  return (
-    <div className="border-b border-rose-100 last:border-0">
-      <button
-        onClick={() => setOpen(o => !o)}
-        className="w-full flex items-center justify-between py-4 text-left gap-4"
-      >
-        <span className="text-sm font-semibold text-rose-900">{q}</span>
-        <span className="flex-shrink-0 w-5 h-5 rounded-full bg-rose-100 flex items-center justify-center text-rose-500 text-xs font-bold transition-transform duration-200" style={{ transform: open ? 'rotate(45deg)' : 'none' }}>+</span>
-      </button>
-      <AnimatePresence initial={false}>
-        {open && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.22, ease: 'easeInOut' }}
-            className="overflow-hidden"
-          >
-            <p className="text-xs text-rose-400 leading-relaxed pb-4">{a}</p>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-}
 
 const container = { hidden: {}, show: { transition: { staggerChildren: 0.09, delayChildren: 0.1 } } };
 const fadeUp = {
@@ -126,14 +88,6 @@ export default function WelcomePage() {
                 </div>
               </motion.div>
             ))}
-          </motion.div>
-
-          {/* FAQ */}
-          <motion.div variants={fadeUp} className="w-full mb-10">
-            <h2 className="text-xs font-bold text-rose-400 uppercase tracking-widest mb-3 text-center">Frequently Asked Questions</h2>
-            <div className="card px-5 py-1">
-              {FAQS.map(f => <FaqItem key={f.q} q={f.q} a={f.a} />)}
-            </div>
           </motion.div>
 
           {/* CTA */}
